@@ -1,0 +1,43 @@
+.footer {
+  margin-top: 3rem;
+  &__wrapper {
+    display: flex;
+  }
+
+  &__social {
+    width: 100%;
+    background-color: #e61645;
+  }
+
+  &__links {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: max-content;
+    gap: 2rem;
+
+    @media (max-width: em(575)) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__policy {
+    padding-top: 3rem;
+    padding-right: 1.5rem;
+    padding-bottom: 3rem;
+    padding-left: 5rem;
+    background: #26292e;
+
+    a {
+      font-size: 1.4rem;
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    @media (max-width: em(767)) {
+      padding-left: 1.5rem;
+    }
+  }
+}

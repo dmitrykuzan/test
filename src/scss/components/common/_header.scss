@@ -1,0 +1,45 @@
+.header {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+
+    min-height: 7rem;
+    background-color: #fff;
+    gap: 3rem;
+  }
+
+  &__content {
+    gap: 3rem;
+  }
+
+  &__buttons {
+    gap: 1rem;
+  }
+
+  &__navigation {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    min-height: 7rem;
+    background-image: linear-gradient(to right, #c33a2b, #ffca62);
+
+    &-list {
+      margin-left: auto;
+      width: max-content;
+      gap: 1.5rem;
+    }
+
+    &-link {
+      border-bottom: 2px solid #fff;
+      font-family: sf ui display semibold, sans-serif;
+      font-size: 16px;
+      color: #fff;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    @media (max-width: em(575)) {
+      display: none;
+    }
+  }
+}
