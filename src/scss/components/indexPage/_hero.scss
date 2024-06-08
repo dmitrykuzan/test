@@ -1,4 +1,11 @@
 .hero {
+  .container {
+    @media (max-width: em(575)) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
   &__wrapper {
     padding-right: 3rem;
     padding-left: 3rem;
@@ -347,6 +354,16 @@
       -webkit-transition-duration: 0.2s;
       transition-duration: 0.2s;
       cursor: pointer;
+
+      @media (max-width: em(585)) {
+        width: initial;
+        height: initial;
+      }
+    }
+
+    @media (max-width: em(585)) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -383,7 +400,7 @@
 
   .close-popup {
     position: absolute;
-    right: -40px;
+    right: 0px;
     top: -40px;
     border-radius: 50%;
     width: 30px;
@@ -578,5 +595,163 @@
     text-transform: uppercase;
     color: #fff;
     background-color: #3a4752;
+  }
+
+  //sweet
+
+  .form__wrapper {
+    position: relative;
+  }
+
+  .sweet-alert {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99999;
+    display: none;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 17px;
+    padding-left: 1.5rem;
+    width: 478px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+
+    &.visible {
+      display: block;
+    }
+
+    @media (max-width: em(575)) {
+      width: 95%;
+    }
+  }
+
+  .sweet-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    &.visible {
+      display: block;
+    }
+  }
+
+  //-
+  .sweet-alert .sa-icon {
+    position: relative;
+    margin: 20px auto;
+    border: 4px solid gray;
+    -webkit-border-radius: 40px;
+    border-radius: 50%;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    box-sizing: content-box;
+  }
+
+  .sweet-alert .sa-icon.sa-success::before {
+    left: -33px;
+    top: -7px;
+    -webkit-border-radius: 120px 0 0 120px;
+    border-radius: 120px 0 0 120px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 60px 60px;
+    transform-origin: 60px 60px;
+  }
+
+  .sweet-alert .sa-icon.sa-success .sa-line.sa-tip {
+    left: 14px;
+    top: 46px;
+    width: 25px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .sweet-alert .sa-icon.sa-success .sa-line {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    border-radius: 2px;
+    height: 5px;
+    background-color: #a5dc86;
+  }
+
+  .sweet-alert .sa-icon.sa-success .sa-line.sa-long {
+    right: 8px;
+    top: 38px;
+    width: 47px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .sweet-alert .sa-icon.sa-success .sa-line {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    border-radius: 2px;
+    height: 5px;
+    background-color: #a5dc86;
+  }
+
+  .sweet-alert .sa-icon.sa-success .sa-placeholder {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    z-index: 2;
+    border: 4px solid rgba(165, 220, 134, 0.2);
+    -webkit-border-radius: 40px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    box-sizing: content-box;
+  }
+
+  .sweet-alert .sa-icon.sa-success .sa-fix {
+    position: absolute;
+    left: 28px;
+    top: 8px;
+    z-index: 1;
+    width: 5px;
+    height: 90px;
+    background-color: #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .sweet-alert p {
+    position: relative;
+    float: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: normal;
+    text-align: inherit;
+    color: #797979;
+  }
+
+  .sweet-alert button {
+    display: inline-block;
+    margin: 26px 5px 0;
+    border: none;
+    -webkit-border-radius: 4px;
+    border-radius: 5px;
+    padding: 10px 32px;
+    box-shadow: none;
+    box-shadow: rgba(140, 212, 245, 0.8) 0px 0px 2px,
+      rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset;
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
+    background-color: #e84242;
+    background-color: #ffa400;
+    cursor: pointer;
   }
 }

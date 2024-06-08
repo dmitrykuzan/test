@@ -39,9 +39,22 @@ export const box = () => {
   }
 
   var closeButton = document.querySelector(".close-popup");
+  var closeButton1 = document.querySelector(".pop-up-button");
+  var closeUpdate = document.querySelector(".update");
+  var overlay = document.querySelector(".sweet-overlay");
+  var sweet = document.querySelector(".sweet-alert");
   var spinResultWrapper = document.querySelector(".spin-result-wrapper");
 
   closeButton.addEventListener("click", function () {
     spinResultWrapper.style.display = "none";
+  });
+
+  closeButton1.addEventListener("click", function () {
+    spinResultWrapper.style.display = "none";
+  });
+
+  closeUpdate.addEventListener("click", function () {
+    overlay.style.display = "none";
+    sweet.classList.remove("visible");
   });
 };

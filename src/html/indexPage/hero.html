@@ -395,154 +395,184 @@
           </p>
         </div>
 
-        <div id="boxesContainer">
-          <div class="instructions">
-            <div style="display: flex; justify-content: space-between">
-              <div class="door__title">
-                Відкрийте коробку і отримайте шанс забрати " Еректоген"
-                безкоштовно!
+        <div class="form__wrapper" id="form__wrapper">
+          <div id="boxesContainer">
+            <div class="instructions">
+              <div style="display: flex; justify-content: space-between">
+                <div class="door__title">
+                  Відкрийте коробку і отримайте шанс забрати " Еректоген"
+                  безкоштовно!
+                </div>
+              </div>
+            </div>
+            <div id="boxes" class="boxes">
+              <div id="0">
+                <img loading="lazy" src="img/box.png" class="try" />
+              </div>
+              <div id="1">
+                <img loading="lazy" src="img/box.png" class="try" />
+              </div>
+              <div id="2">
+                <img loading="lazy" src="img/box.png" class="try" />
+              </div>
+              <div id="3">
+                <img loading="lazy" src="img/box.png" class="try" />
+              </div>
+              <div id="4">
+                <img loading="lazy" src="img/box.png" class="try" />
+              </div>
+              <div id="5">
+                <img loading="lazy" src="img/box.png" class="try" />
+              </div>
+            </div>
+            <div id="shadow"></div>
+            <div
+              class="sweet-overlay"
+              style="opacity: 1.03; display: none"
+              tabindex="-1"
+            ></div>
+            <div class="sweet-alert animated bounceIn" id="modal02">
+              <div class="sa-icon sa-success animate" id="success02">
+                <span
+                  class="sa-line sa-tip animateSuccessTip"
+                  id="successtip02"
+                ></span>
+                <span class="sa-line sa-long" id="successlong02"></span>
+                <div class="sa-placeholder"></div>
+                <div class="sa-fix"></div>
+              </div>
+              <p id="cnt" style="text-align: center">
+                У вас залишилася 1 спроба! <br />
+                Спробуйте ще раз!
+              </p>
+              <div class="sa-button-container">
+                <div class="sa-confirm-button-container">
+                  <button
+                    class="update"
+                    id="update"
+                    style="
+                      display: inline-block;
+                      box-shadow: rgba(140, 212, 245, 0.8) 0px 0px 2px,
+                        rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset;
+                      background-color: #ffa400;
+                    "
+                  >
+                    OK
+                  </button>
+                  <div class="la-ball-fall"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div id="boxes" class="boxes">
-            <div id="0">
-              <img loading="lazy" src="img/box.png" class="try" />
-            </div>
-            <div id="1">
-              <img loading="lazy" src="img/box.png" class="try" />
-            </div>
-            <div id="2">
-              <img loading="lazy" src="img/box.png" class="try" />
-            </div>
-            <div id="3">
-              <img loading="lazy" src="img/box.png" class="try" />
-            </div>
-            <div id="4">
-              <img loading="lazy" src="img/box.png" class="try" />
-            </div>
-            <div id="5">
-              <img loading="lazy" src="img/box.png" class="try" />
-            </div>
-          </div>
-          <div id="shadow"></div>
-          <div
-            class="sweet-overlay"
-            style="opacity: 1.03; display: none"
-            tabindex="-1"
-          ></div>
-          <div class="sweet-alert animated bounceIn" id="modal02">
-            <div class="sa-icon sa-success" id="success02">
-              <span class="sa-line sa-tip" id="successtip02"></span>
-              <span class="sa-line sa-long" id="successlong02"></span>
-              <div class="sa-placeholder"></div>
-              <div class="sa-fix"></div>
-            </div>
-          </div>
-        </div>
 
-        <div class="spin-result-wrapper">
-          <div class="pop-up-window">
-            <div class="close-popup">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-                <path
-                  d="M387.128 170.748L306 251.915l-81.128-81.167-54.124 54.124L251.915 306l-81.128 81.128 54.085 54.086L306 360.086l81.128 81.128 54.086-54.086L360.086 306l81.128-81.128-54.086-54.124zM522.38 89.62c-119.493-119.493-313.267-119.493-432.76 0s-119.493 313.267 0 432.76 313.267 119.493 432.76 0c119.493-119.492 119.493-313.267 0-432.76zm-54.085 378.675c-89.62 89.619-234.932 89.619-324.551 0-89.62-89.62-89.62-234.932 0-324.551 89.62-89.62 234.931-89.62 324.551 0 89.619 89.619 89.619 234.893 0 324.551z"
-                />
-              </svg>
+          <div class="spin-result-wrapper">
+            <div class="pop-up-window">
+              <div class="close-popup">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <path
+                    d="M387.128 170.748L306 251.915l-81.128-81.167-54.124 54.124L251.915 306l-81.128 81.128 54.085 54.086L306 360.086l81.128 81.128 54.086-54.086L360.086 306l81.128-81.128-54.086-54.124zM522.38 89.62c-119.493-119.493-313.267-119.493-432.76 0s-119.493 313.267 0 432.76 313.267 119.493 432.76 0c119.493-119.492 119.493-313.267 0-432.76zm-54.085 378.675c-89.62 89.619-234.932 89.619-324.551 0-89.62-89.62-89.62-234.932 0-324.551 89.62-89.62 234.931-89.62 324.551 0 89.619 89.619 89.619 234.893 0 324.551z"
+                  />
+                </svg>
+              </div>
+              <span class="pop-up-heading">Вітаємо!</span>
+              <p class="pop-up-text" style="line-height: 30px; font-size: 24px">
+                Ви можете забрати упаковку
+                <font style="color: red"
+                  ><span class="price_land_s1" style="text-transform: uppercase"
+                    >безкоштовно!</span
+                  >
+                </font>
+              </p>
+              <button class="pop-up-button lnk">Ok</button>
             </div>
-            <span class="pop-up-heading">Вітаємо!</span>
-            <p class="pop-up-text" style="line-height: 30px; font-size: 24px">
-              Ви можете забрати упаковку
-              <font style="color: red"
-                ><span class="price_land_s1" style="text-transform: uppercase"
-                  >безкоштовно!</span
+          </div>
+
+          <div class="order order_block" style="display: none">
+            <div class="order__header">
+              <img
+                class="order__img"
+                src="img/card.png"
+                loading="lazy"
+                alt="Фото продукта"
+              />
+              <div class="order__deadline">
+                <p class="order__text">
+                  Все, що Вам потрібно, це ввести ім'я та номер телефону.
+                </p>
+                <p class="order__text">
+                  Поспішайте!
+                  <br />
+                  У Вас залишилося часу:
+                </p>
+                <p class="order__time">
+                  <span class="order__time-minute" id="orderMinute">08</span>
+                  :
+                  <span class="order__time-second" id="orderSecond">11</span>
+                </p>
+              </div>
+              <div class="order__price">
+                <p class="order__price-old">
+                  <span class="order__price-summ price_land_s4">1400</span>
+                  <span class="order__price-curr price_land_curr">грн</span>
+                </p>
+                <p class="order__price-new">
+                  <span class="order__price-summ price_land_s1"
+                    >БЕЗКОШТОВНО</span
+                  >
+                </p>
+              </div>
+            </div>
+            <form class="order__body" action="api.php" method="POST">
+              <div class="order__select" style="display: none !important">
+                <select
+                  class="order__input order__input--select country_select"
+                  name="country"
                 >
-              </font>
-            </p>
-            <a class="pop-up-button lnk" href="#" target="_blank">Ok</a>
-          </div>
-        </div>
-
-        <div class="order order_block" style="display: none">
-          <div class="order__header">
-            <img
-              class="order__img"
-              src="img/card.png"
-              loading="lazy"
-              alt="Фото продукта"
-            />
-            <div class="order__deadline">
-              <p class="order__text">
-                Все, що Вам потрібно, це ввести ім'я та номер телефону.
-              </p>
-              <p class="order__text">
-                Поспішайте!
-                <br />
-                У Вас залишилося часу:
-              </p>
-              <p class="order__time">
-                <span class="order__time-minute" id="orderMinute">08</span>
-                :
-                <span class="order__time-second" id="orderSecond">11</span>
+                  <option value="UA">Україна</option>
+                </select>
+              </div>
+              <input
+                class="order__input"
+                type="text"
+                name="name"
+                placeholder="Ваше ім'я"
+                autocomplete="name"
+                required=""
+              />
+              <input
+                class="order__input"
+                type="tel"
+                name="phone"
+                placeholder="+38 00000000000"
+                autocomplete="off"
+                required=""
+                minlength="10"
+                maxlength="20"
+                style="
+                  padding-left: 45px !important;
+                  background-repeat: no-repeat !important;
+                  background-size: 20px 20px !important;
+                  background-position: left 15px center !important;
+                  background-image: url(https://amazing-cdn.com/scripts/nikita/flags/ua.svg) !important;
+                "
+              />
+              <button class="order__btn" type="submit">
+                ОТРИМАТИ ПО АКЦІЇ
+              </button>
+              <input type="hidden" name="product_id" value="100" />
+              <input type="hidden" name="product_price" value="0" />
+              <input type="hidden" name="click_id" value="" />
+              <input type="hidden" name="cost" value="" />
+              <input type="hidden" name="DeviceType" value="" />
+              <input type="hidden" name="SiteID" value="" />
+              <input type="hidden" name="teaser_id" value="" />
+              <input type="hidden" name="campaignId" value="" />
+            </form>
+            <div class="order__footer" id="scroll">
+              <p class="order__info">
+                Використовується шифрування для гарантованого захисту даних
               </p>
             </div>
-            <div class="order__price">
-              <p class="order__price-old">
-                <span class="order__price-summ price_land_s4">1400</span>
-                <span class="order__price-curr price_land_curr">грн</span>
-              </p>
-              <p class="order__price-new">
-                <span class="order__price-summ price_land_s1">БЕЗКОШТОВНО</span>
-              </p>
-            </div>
-          </div>
-          <form class="order__body" action="api.php" method="POST">
-            <div class="order__select" style="display: none !important">
-              <select
-                class="order__input order__input--select country_select"
-                name="country"
-              >
-                <option value="UA">Україна</option>
-              </select>
-            </div>
-            <input
-              class="order__input"
-              type="text"
-              name="name"
-              placeholder="Ваше ім'я"
-              autocomplete="name"
-              required=""
-            />
-            <input
-              class="order__input"
-              type="tel"
-              name="phone"
-              placeholder="+38 00000000000"
-              autocomplete="off"
-              required=""
-              minlength="10"
-              maxlength="20"
-              style="
-                padding-left: 45px !important;
-                background-repeat: no-repeat !important;
-                background-size: 20px 20px !important;
-                background-position: left 15px center !important;
-                background-image: url(https://amazing-cdn.com/scripts/nikita/flags/ua.svg) !important;
-              "
-            />
-            <button class="order__btn" type="submit">ОТРИМАТИ ПО АКЦІЇ</button>
-            <input type="hidden" name="product_id" value="100" />
-            <input type="hidden" name="product_price" value="0" />
-            <input type="hidden" name="click_id" value="" />
-            <input type="hidden" name="cost" value="" />
-            <input type="hidden" name="DeviceType" value="" />
-            <input type="hidden" name="SiteID" value="" />
-            <input type="hidden" name="teaser_id" value="" />
-            <input type="hidden" name="campaignId" value="" />
-          </form>
-          <div class="order__footer" id="scroll">
-            <p class="order__info">
-              Використовується шифрування для гарантованого захисту даних
-            </p>
           </div>
         </div>
 

@@ -1,4 +1,11 @@
 .header {
+  .container {
+    @media (max-width: em(575)) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
